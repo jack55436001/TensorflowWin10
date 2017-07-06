@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/USER/Desktop/win10_tensorflow/embedding/logs\\projector/a_model.ckpt-10000"
+all_model_checkpoint_paths: "/Users/USER/Desktop/win10_tensorflow/embedding/logs\\projector/a_model.ckpt-10000"
