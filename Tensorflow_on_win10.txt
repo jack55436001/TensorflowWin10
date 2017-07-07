@@ -25,3 +25,5 @@ tf.logging.set_verbosity(tf.logging.INFO)
 
 how to visulize tensorboard(https://www.tensorflow.org/get_started/summaries_and_tensorboard)
 using tf.summary.scalar -> tf.summary.merge_all -> tf.summary.FileWriter
+
+With tf.name_scope("") share variable

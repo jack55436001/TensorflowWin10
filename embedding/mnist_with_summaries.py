@@ -56,8 +56,8 @@ def train():
 
     # Input set for Embedded TensorBoard visualization
     # Performed with cpu to conserve memory and processing power
-    with tf.device("/cpu:0"):
-        embedding = tf.Variable(tf.stack(mnist.test.images[:FLAGS.max_steps], axis=0), trainable=False, name='embedding')
+    # with tf.device("/cpu:0"):
+    embedding = tf.Variable(tf.stack(mnist.test.images[:FLAGS.max_steps], axis=0), trainable=False, name='embedding')
 
     with tf.name_scope('input_reshape'):
         image_shaped_input = tf.reshape(x, [-1, 28, 28, 1])
@@ -244,9 +244,9 @@ if __name__ == '__main__':
                         help='Initial learning rate')
     parser.add_argument('--dropout', type=float, default=0.9,
                         help='Keep probability for training dropout.')
-    parser.add_argument('--data_dir', type=str, default='/Users/norman/Documents/workspace/mnist-tensorboard-embeddings/mnist_data',
+    parser.add_argument('--data_dir', type=str, default='/Users/USER/Desktop/win10_tensorflow/embedding/mnist_data',
                         help='Directory for storing input data')
-    parser.add_argument('--log_dir', type=str, default='/Users/norman/Documents/workspace/mnist-tensorboard-embeddings/logs',
+    parser.add_argument('--log_dir', type=str, default='/Users/USER/Desktop/win10_tensorflow/embedding/logs',
                         help='Summaries log directory')
     FLAGS, unparsed = parser.parse_known_args()
     tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)

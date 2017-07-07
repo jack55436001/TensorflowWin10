@@ -74,6 +74,7 @@ def generate_metadata_file():
                                       fake_data=FLAGS.fake_data)
     def save_metadata(file):
         with open(file, 'w') as f:
+            #print(mnist.test.labels.shape)
             for i in range(FLAGS.max_steps):
                 c = np.nonzero(mnist.test.labels[::1])[1:][0][i]
                 f.write('{}\n'.format(c))
