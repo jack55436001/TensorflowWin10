@@ -26,5 +26,13 @@ tf.logging.set_verbosity(tf.logging.INFO)
 how to visulize tensorboard(https://www.tensorflow.org/get_started/summaries_and_tensorboard)
 using tf.summary.scalar -> tf.summary.merge_all -> tf.summary.FileWriter
 
-With tf.name_scope("") share variable name
+With tf.name_scope
 with tf.variable_scope
+share variable name
+
+cnn_mnist.py 
+show how to reload model form emulator
+how to log some important info
+how to build model from buildin function
+
+cifar10 dir include training and evalution
